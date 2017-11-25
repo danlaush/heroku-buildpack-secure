@@ -1,9 +1,16 @@
 # heroku-buildpack-static
+
 **NOTE**: This buildpack is in an experimental OSS project.
 
 This is a buildpack for handling static sites and single page web apps.
 
 For a guide, read the [Getting Started with Single Page Apps on Heroku](https://gist.github.com/hone/24b06869b4c1eca701f9).
+
+## Secure
+
+This is a fork of Heroku's static buildback in order to add basic auth security.
+
+Process via [James Hughes](https://yobriefca.se/blog/2012/08/20/securely-serving-static-files-on-heroku/)
 
 ## Features
 * serving static assets
@@ -14,7 +21,7 @@ For a guide, read the [Getting Started with Single Page Apps on Heroku](https://
 ## Deploying
 The `static.json` file is required to use this buildpack. This file handles all the configuration described below.
 
-1. Set the app to this buildpack: `$ heroku buildpacks:set https://github.com/heroku/heroku-buildpack-static.git`.
+1. Set the app to this buildpack: `$ heroku buildpacks:set https://github.com/danlaush/heroku-buildpack-secure.git`.
 2. Deploy: `$ git push heroku master`
 
 ### Configuration
